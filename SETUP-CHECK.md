@@ -1,5 +1,9 @@
 # Setup Check
 
-The demo account can create and update repository files through the GitHub API.
+Verified API operations:
+
+- Read repository metadata and files.
+- Create repository files.
+- Update repository files.
 
 This repository is disposable.
