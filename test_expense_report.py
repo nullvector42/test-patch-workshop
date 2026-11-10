@@ -30,7 +30,6 @@ class ExpenseReportTests(unittest.TestCase):
         self.assertEqual(total, Decimal("15.45"))
         self.assertEqual(categories, {"Hosting": Decimal("15.45")})
 
-    @unittest.expectedFailure
     def test_end_date_is_inclusive(self):
         total, categories = self.summarize_rows(
             "2025-12-31,Hosting,100.00\n2026-01-01,Hosting,10.00\n"

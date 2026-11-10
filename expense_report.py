@@ -16,7 +16,7 @@ def summarize(path, start=None, end=None):
             day = date.fromisoformat(row["date"])
             if start and day < start:
                 continue
-            if end and day >= end:
+            if end and day > end:
                 continue
             amount = Decimal(row["amount"])
             category = row["category"]
