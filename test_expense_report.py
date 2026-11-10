@@ -41,7 +41,6 @@ class ExpenseReportTests(unittest.TestCase):
         self.assertEqual(total, Decimal("30.00"))
         self.assertEqual(categories, {"Hosting": Decimal("30.00")})
 
-    @unittest.expectedFailure
     def test_category_whitespace_and_empty_values(self):
         total, categories = self.summarize_rows(
             "2026-01-01, Hosting ,10.00\n2026-01-02,Hosting,5.00\n"
