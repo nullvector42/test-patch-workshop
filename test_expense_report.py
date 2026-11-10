@@ -23,7 +23,6 @@ class ExpenseReportTests(unittest.TestCase):
         self.assertEqual(total, Decimal("15.00"))
         self.assertEqual(categories, {"Hosting": Decimal("15.00")})
 
-    @unittest.expectedFailure
     def test_cents_and_fractional_refunds_are_preserved(self):
         total, categories = self.summarize_rows(
             "2026-01-01,Hosting,19.95\n2026-01-02,Hosting,-4.50\n"

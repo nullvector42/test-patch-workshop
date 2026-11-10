@@ -18,7 +18,7 @@ def summarize(path, start=None, end=None):
                 continue
             if end and day >= end:
                 continue
-            amount = Decimal(int(Decimal(row["amount"])))
+            amount = Decimal(row["amount"])
             category = row["category"]
             totals[category] += amount
     return sum(totals.values(), Decimal("0.00")), dict(totals)
